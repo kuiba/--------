@@ -32,7 +32,9 @@ function S_doRePrint(current){
 		}else{
 			$("#Reprint").contents().find(".tb-editor-editarea:last")[0].innerHTML=S_ccObjs[current].innerHTML;
 			// $("#Reprint").contents().find("input:submit:last").trigger("click");
-			var the_Content=S_ccObjs[current].innerHTML;
+			var the_Content = unsafeWindow.rich_postor._getData();
+			var content=S_ccObjs[current].innerHTML;
+			the_Content.content=content;
 			unsafeWindow.PostHandler.post(S_newUrl,the_Content,function(to_Post) 
 			{unsafeWindow.rich_postor.showAddResult(to_Post)},function(to_Post) {}
 			);  
