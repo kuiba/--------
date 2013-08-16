@@ -33,7 +33,7 @@ function S_doRePrint(current){
 			$("#Reprint").contents().find(".tb-editor-editarea:last")[0].innerHTML=S_ccObjs[current].innerHTML;
 			$("#Reprint").contents().find("input:submit:last").trigger("click");
 			$("#Reprint").one("load", function(){
-				setTimeout(function(){S_doRePrint(current+1);},6000+Math.random()*10000);
+				setTimeout(function(){S_doRePrint(current+1);},2000+Math.random()*10000);
 			});
 		}
 	}
