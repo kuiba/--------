@@ -31,7 +31,11 @@ function S_doRePrint(current){
 			S_doRePrint(current+1);
 		}else{
 			$("#Reprint").contents().find(".tb-editor-editarea:last")[0].innerHTML=S_ccObjs[current].innerHTML;
-			$("#Reprint").contents().find("input:submit:last").trigger("click");
+			// $("#Reprint").contents().find("input:submit:last").trigger("click");
+			var the_Content=S_ccObjs[current].innerHTML;
+			unsafeWindow.PostHandler.post(S_newUrl,the_Content,function(to_Post) 
+			{unsafeWindow.rich_postor.showAddResult(to_Post)},function(to_Post) {}
+			);  
 			$("#Reprint").one("load", function(){
 				setTimeout(function(){S_doRePrint(current+1);},Math.random()*10000-9000);
 			});
