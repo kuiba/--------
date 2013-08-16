@@ -5,7 +5,7 @@ var S_ccObjs="";
 var S_newUrl="";
 function S_rePrint(S_forumName){
   $("body").append('<iframe style="width:1000px;height:500px;z-index:99999;position:absolute;top:30px;right:5px;" id="Reprint"></iframe>');
-	$("#Reprint")[0].src="http://tieba.baidu.com/f?kw=%C9%BD%B6%A5%D2%B0%C8%CB;
+	$("#Reprint")[0].src="http://tieba.baidu.com/f?kw=%C9%BD%B6%A5%D2%B0%C8%CB;"
 	$("#Reprint").one("load", function(){
 		$("#Reprint").contents().find(".tb_header_search_input")[0].value=S_forumName;
 		// $("#Reprint").contents().find("search_submit").trigger("click");//转到置顶贴吧
