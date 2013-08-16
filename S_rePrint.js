@@ -11,7 +11,7 @@ function S_rePrint(S_forumName){
 		$("#Reprint").contents().find("#search_submit").trigger("click");//转到置顶贴吧
 		$("#Reprint").one("load", function(){
 			$("#Reprint").contents().find("#title1")[0].value=PageData.thread.title;//主题名
-			$("#Reprint").contents().find(".tb-editor-editarea:last")[0].innerHTML="转自:"+PageData.forum_name+"吧<br>原帖名:"+PageData.thread.title+"<br>原作者:@"+PageData.thread.author+"  <br>原地址:http://tieba.baidu.com/p/"+PageData.thread.id+"<br>以下为原帖内容,机器转帖,未做任何修改:";//一楼著名来源信息
+			$("#Reprint").contents().find(".tb-editor-editarea:last")[0].innerHTML="转自:"+PageData.forum_name+"吧<br>原帖名:"+PageData.thread.title+"  <br>原地址:http://tieba.baidu.com/p/"+PageData.thread.id;//一楼著名来源信息
 			$("#Reprint").contents().find("input:submit:last").trigger("click");//发帖
 			S_findNew();
 		});
