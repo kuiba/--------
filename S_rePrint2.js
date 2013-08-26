@@ -23,12 +23,13 @@ if(S_tiezi=="")
 {setTimeout(function(){S_doRePrint(0);},4000+Math.random()*10000);}
 else{
 setTimeout(function(){S_doRePrint(parseInt(S_tiezi));},4000+Math.random()*10000);
-}
 
+}
 
 });
 //S_rePrint("蝉曦");
-}else{
+}
+else{
 $("#Reprint")[0].src="http://tieba.baidu.com/p/"+PageData.thread.id+"?see_lz=1&pn="+current;
 $("#Reprint").one("load", function(){
 $(".p_postlist").append($("#Reprint").contents().find(".l_post"))
