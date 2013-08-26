@@ -5,9 +5,7 @@ var S_lastPage=prompt("输入要转的结束页");
 var S_tiezi=prompt("输入要从第几楼开始转载");
 $("body").append('<iframe style="width:1000px;height:500px;z-index:99999;position:absolute;top:30px;right:5px;" id="Reprint"></iframe>');
 $(".l_post").remove();
-       $.ajaxSetup({
-            cache: false
-        });
+
 if(S_firstPage=="")
 {S_getAllPage(1);}
 else{
