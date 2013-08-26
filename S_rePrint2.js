@@ -8,7 +8,7 @@ $(".l_post").remove();
 S_getAllPage(1);
 
 function S_getAllPage(current){
-  if(current>PageData.all_page_num){
+  if(current>PageData.all_page_num||current>=10){
 		S_ccObjs=$("cc .d_post_content");
 		$("#Reprint")[0].src=S_newUrl;
 		$("#Reprint").one("load", function(){
