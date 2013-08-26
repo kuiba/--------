@@ -12,7 +12,7 @@ function S_getAllPage(current){
 		S_ccObjs=$("cc .d_post_content");
 		$("#Reprint")[0].src=S_newUrl;
 		$("#Reprint").one("load", function(){
-			setTimeout(function(){S_doRePrint(3);},4000+Math.random()*10000);
+			setTimeout(function(){S_doRePrint(65);},4000+Math.random()*10000);
 		});
 		//S_rePrint("蝉曦");
 	}else{
