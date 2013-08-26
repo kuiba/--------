@@ -9,9 +9,9 @@ $(".l_post").remove();
             cache: false
         });
 if(S_firstPage=="")
-{S_getAllPage(parseInt(S_firstPage));}
+{S_getAllPage(1);}
 else{
-S_getAllPage(1);
+S_getAllPage(parseInt(S_firstPage));
 }
 
 function S_getAllPage(current){
