@@ -18,7 +18,7 @@ else{
 }
 
 function S_getAllPage(current){
-  if(current>PageData.all_page_num||current>S_lastPage){
+  if(current>PageData.all_page_num||current>=S_lastPage){
 S_ccObjs=$("cc .d_post_content");
 $("#Reprint")[0].src=S_newUrl;
 $("#Reprint").one("load", function(){
