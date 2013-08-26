@@ -19,8 +19,8 @@ function S_getAllPage(current){
 S_ccObjs=$("cc .d_post_content");
 $("#Reprint")[0].src=S_newUrl;
 $("#Reprint").one("load", function(){
-if(S_firstPage=="")
-{setTimeout(function(){S_doRePrint(1);},4000+Math.random()*10000);}
+if(S_tiezi=="")
+{setTimeout(function(){S_doRePrint(0);},4000+Math.random()*10000);}
 else{
 setTimeout(function(){S_doRePrint(parseInt(S_tiezi));},4000+Math.random()*10000);
 }
