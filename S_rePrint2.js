@@ -3,13 +3,15 @@ var S_newUrl=prompt("输入要转到的贴帖子地址");
 $("body").append('<iframe style="width:1000px;height:500px;z-index:99999;position:absolute;top:30px;right:5px;" id="Reprint"></iframe>');
 $(".l_post").remove();
 S_getAllPage(1);
-
+       $.ajaxSetup({
+            cache: false
+        });
 function S_getAllPage(current){
   if(current>PageData.all_page_num){
 		S_ccObjs=$("cc .d_post_content");
 		$("#Reprint")[0].src=S_newUrl;
 		$("#Reprint").one("load", function(){
-			setTimeout(function(){S_doRePrint(0);},4000+Math.random()*10000);
+			setTimeout(function(){S_doRePrint(3);},4000+Math.random()*10000);
 		});
 		//S_rePrint("蝉曦");
 	}else{
