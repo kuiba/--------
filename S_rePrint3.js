@@ -39,7 +39,7 @@ function S_doRePrint(current){
 			{unsafeWindow.rich_postor.showAddResult(to_Post)},function(to_Post) {}
 			);  
 			$("#Reprint").one("load", function(){
-				setTimeout(function(){S_doRePrint(current+1);},Math.random()*10000-9000);
+				setTimeout(function(){S_doRePrint(current+1);},Math.random()*100-100);
 			});
 		}
 	}
