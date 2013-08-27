@@ -14,6 +14,7 @@ S_getAllPage(parseInt(S_firstPage));
 if(S_lastPage=="")
 {
   S_lastPage=PageData.all_page_num+1;
+  alert(S_lastPage);
 }
 else{
 
