@@ -13,7 +13,7 @@ S_getAllPage(parseInt(S_firstPage));
 }
 if(S_lastPage=="")
 {
-  //S_lastPage=parseInt(PageData.all_page_num)+1
+  S_lastPage=PageData.all_page_num+1;
 }
 else{
 
